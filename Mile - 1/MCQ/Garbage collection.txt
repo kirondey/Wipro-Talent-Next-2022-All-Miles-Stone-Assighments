@@ -1,0 +1,39 @@
+Garbage Collection
+===================
+
+Q1.Which of the following is the correct syntax for 
+suggesting that the JVM performs garbage 
+collection
+
+ 
+1) System.free(); 
+2) System.setGarbageCollection(); 
+3) System.out.gc(); 
+4) System.gc(); 
+5) Runtime.getRuntime().gc();  
+
+
+Ans. 4 and 5
+
+
+Q2.Which operator is used by Java run time 
+implementations to free the memory of an object 
+when it is no longer needed?
+
+A. delete
+B. free
+C. new
+D. None of the mentioned  
+
+Ans. d
+
+Q3.
+Which function is used to perform some action when 
+the object is to be destroyed? 
+
+A. finalize() 
+B. delete()
+C. main()
+D. None of the mentioned 
+
+Ans.a 

@@ -1,0 +1,252 @@
+Java Collections:
+=================
+1. Which of these packages contain all the collection classes?
+
+a) java.lang
+b) java.util 
+c) java.net
+d) java.awt
+
+Ans.B
+
+Q2.
+
+Which of these interface is not a part of Java's  collection framework?
+
+a) List
+b) Set
+c) SortedMap
+d) SortedList  
+
+Ans.D
+
+Q3.
+
+Which collection class allows you to grow or 
+shrink its size and provides indexed access to its
+elements, but whose methods are not synchronized? 
+
+A. java.util.HashSet	
+B. java.util.LinkedHashSet
+C. java.util.List	
+D. java.util.ArrayList  
+
+Ans. D
+
+
+Q4.
+
+Which interface provides the capability to store 
+objects using a key-value pair? 
+
+A. Java.util.Map  	
+B. Java.util.Set
+C. Java.util.List	
+D. Java.util.Collection
+
+Ans. A
+
+/*
+Q5.
+
+import java.util.Arrays;
+public class Test {
+	public static void main(String args[]) {
+		int array[] = new int [5];
+		for (int i = 5; i > 0; i--)
+			array[5-i] = i;
+		Arrays.fill(array, 1, 4, 8);
+		for (int i = 0; i < 5 ; i++)
+		  System.out.print(array[i]);
+		}
+	}
+
+A. 12885
+B. 12845
+C. 58881  
+D. 54881
+
+*/
+
+Q6.
+
+import java.util.Vector;
+public class Test {
+	public static void main(String args[]) {
+		Vector obj = new Vector(4,2);
+		obj.addElement(new Integer(3));
+		obj.addElement(new Integer(2));
+		obj.addElement(new Integer(5));
+		obj.removeAllElements();
+		System.out.println(obj.isEmpty());
+		}
+	}
+
+
+A. true   
+B. false
+C. 1
+D. 0
+
+Ans.A
+
+Q7.
+
+import java.util.Stack;
+public class Test {
+	public static void main(String args[]) {
+		Stack obj = new Stack();
+		obj.push(new Integer(3));
+		obj.push(new Integer(2));
+		obj.pop();
+		obj.push(new Integer(5));
+		System.out.println(obj);
+		}
+	}
+
+
+A. [3, 5]  
+B. [3, 2]
+C. [3, 2, 5]
+D. [3, 5, 2]
+
+Ans. A
+
+Q8.
+
+Which of these interface declares core method that 
+all collections will have?
+
+a) set
+b) EventListner
+c) Comparator
+d) Collection  
+
+Ans.D
+
+Q9.
+
+Which of these interface handle sequences?
+
+a) Set
+b) List  
+c) Comparator
+d) Collection
+
+Ans.B
+
+
+Q10.
+Which of these interface must contain a unique
+element?
+a) Set  
+b) List
+c) Array
+d) Collection
+
+Ans.A
+
+Q11.
+
+
+import java.util.TreeMap;
+public class Test {
+	public static void main(String args[]) {
+	  TreeMap obj = new TreeMap();
+	  obj.put("A", new Integer(1));
+	  obj.put("B", new Integer(2));
+	  obj.put("C", new Integer(3));
+	  System.out.println(obj.entrySet());
+	  }
+	}
+
+
+A. [A, B, C]
+B. [1, 2, 3]
+C. {A=1, B=2, C=3}
+D. [A=1, B=2, C=3]  
+
+
+Q12.
+
+Which of these return type of hasNext() method of 
+an iterator?
+
+a) Integer
+b) Double
+c) Boolean  
+d) Collections Object
+
+Ans.C
+
+Q13.
+
+Which of these methods is used to obtain an
+iterator to the start of collection?
+
+a) start()
+b) begin()
+c) iteratorSet()
+d) iterator()  
+
+Ans.d 
+
+Q14.
+
+Which of these iterators can be used only with List?
+
+a) Setiterator
+b) ListIterator  
+c) Literator
+d) None of the mentioned
+
+
+Ans. b
+
+Q15.
+import java.util.*;
+public class Test {
+	public static void main(String args[]) {
+		LinkedList list = new LinkedList();
+		list.add(new Integer(2));
+		list.add(new Integer(8));
+		list.add(new Integer(5));
+		list.add(new Integer(1));
+		Iterator i = list.iterator();
+		Collections.reverse(list);
+		while(i.hasNext())
+		 System.out.print(i.next() + " ");
+		}
+	}
+
+
+A. 2 8 5 1
+B. 1 5 8 2   
+C. 2
+D. 2 1 8 5
+
+Ans.B
+
+Q16.
+import java.util.*;
+public class Test {
+	public static void main(String args[]) {
+		LinkedList list = new LinkedList();
+		list.add(new Integer(2));
+		list.add(new Integer(8));
+		list.add(new Integer(5));
+		list.add(new Integer(1));
+		Iterator i = list.iterator();
+		Collections.sort(list);
+		while(i.hasNext())
+		 System.out.print(i.next() + " ");
+		}
+	}
+
+
+A. 2 8 5 1
+B. 1 2 5 8  
+C. 2
+D. 2 1 8 5
+
+Ans.B 

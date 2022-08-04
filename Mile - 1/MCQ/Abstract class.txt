@@ -1,0 +1,277 @@
+Abstract class:
+===============
+Q1.
+abstract class Test{
+	void show();
+}
+public class Test extends Test{
+    void show(){
+    	System.out.println("Show");
+    }
+	public static void main(String[] args) {
+		Test obj=new Test();
+		obj.show();
+ }
+}
+
+
+A. Compile Time Error 
+B. It will print 'Show'
+C. No Output
+D. Runtime Error                
+
+
+Ans. A
+
+	  
+Q2.
+
+abstract class Test{
+	final abstract void show();
+}
+public class Test extends Test{
+    void show(){
+    	System.out.println("Show");
+    }
+	public static void main(String[] args) {
+		Test obj=new Test();
+		obj.show();
+ }
+}
+
+
+A. Compile Time Error  
+B. It will print 'Show'
+C. No Output 
+D. Runtime Error
+
+Ans.A
+
+Q3.
+abstract class Demo{
+	abstract void show();
+}
+public class Test extends Demo{
+    void show(){
+    	System.out.println("Show");
+    }
+	public static void main(String[] args) {
+		Demo obj=new Demo();
+		obj.show();
+  }
+}
+
+
+A. Compile Time Error 
+B. It will print 'Show'
+C. No Output
+D. Runtime Error	
+
+Ans. A
+
+
+Q4.
+abstract class Demo{
+	abstract void show();
+}
+public class Test extends Demo{
+    void show(){
+    	System.out.println("Show");
+    }
+	public static void main(String[] args) {
+		Demo obj=new Test();
+		obj.show();
+ }
+}
+
+A. Compile Time Error  
+B. It will print 'Show' 
+C. No Output 
+D. Runtime Error
+	
+Ans.B
+
+
+Q5.
+abstract class Demo{
+	abstract void show1();
+	abstract void show2();
+}
+public class Test extends Demo{
+    void show1(){
+    	System.out.println("Show1");
+    }
+	public static void main(String[] args) {
+		Demo obj=new Test();
+		obj.show1();
+ }
+}
+
+
+A. Compile Time Error 
+B. It will print 'Show'
+C. No Output
+D. Runtime Error
+
+Ans.A
+
+Q6.
+abstract class Demo{	
+}
+public class Test extends Demo{
+    void show1(){
+    	System.out.println("Show1");
+    }
+	public static void main(String[] args) {
+		Test obj=new Test();
+		obj.show1();
+	}
+  }
+
+
+A. Compile Time Error  
+B. It will print 'Show1' 
+C. No Output 
+D. Runtime Error
+
+Ans. B
+
+Q7.
+
+abstract class Test{
+	abstract void show1();
+}
+abstract class Test1 extends Test{ }
+public class Test extends Test1{
+    void show1(){
+    	System.out.println("Show1");
+    }
+	public static void main(String[] args) {
+		Test obj=new Test();
+		obj.show1();
+ }
+}
+
+
+A. Compile Time Error 
+B. It will print 'Show1' 
+C. No Output
+D. Runtime Error
+
+Ans.B
+
+
+Q8.
+abstract class Test{
+	static abstract void show1();
+}
+public class Test extends Test{
+    void show1(){
+    	System.out.println("Show1");
+    }
+	public static void main(String[] args) {
+		Test obj=new Test();
+		obj.show1();
+	}
+ }
+
+
+A. Compile Time Error  
+B. It will print 'Show1' 
+C. No Output 
+D. Runtime Error
+
+Ans.A
+
+Q9.
+abstract class Test{
+	public abstract void show1();
+}
+public class Test extends Test{
+    void show1(){
+    	System.out.println("Show1");
+    }
+	public static void main(String[] args) {
+		Test obj=new Test();
+		obj.show1();
+ 	}
+ }
+
+
+A. Compile Time Error 
+B. It will print 'Show1' 
+C. No Output
+D. Runtime Error
+
+Ans.A
+
+Q10.
+abstract class Test{
+	abstract void show1();
+}
+abstract class Test1{ }
+public class Test extends Test , Test1{
+    void show1(){
+    	System.out.println("Show1");
+    }
+	public static void main(String[] args) {
+		Test obj=new Test();
+		obj.show1();
+   }
+ }
+
+
+A. Compile Time Error  
+B. It will print 'Show1' 
+C. No Output 
+D. Runtime Error
+
+Ans.A
+
+Q11.
+
+public abstract class Test{
+	abstract void show2();
+    void show1(){
+    	System.out.println("Show1");
+    }
+	public static void main(String[] args) {
+		Test obj=null;
+		obj.show1();
+	}
+ }
+
+
+A. Compile Time Error 
+B. It will print 'Show1' 
+C. No Output
+D. Runtime Error 
+
+Ans.D
+
+Q12.
+abstract class Base{ 
+    abstract public void myfunc(); 
+    public void another(){ 
+		System.out.println("Another method"); 
+    }  
+} 
+public class Test extends Base{ 
+    public static void main(String argv[]){ 
+		Test a = new Test(); 
+		a.amethod(); 
+    } 
+    public void myfunc(){ 
+         System.out.println("My Func"); 
+    } 
+    public void amethod(){ 
+		myfunc();
+   }
+ } 
+
+A. Compile Time Error 
+B. It will print 'My Func'  
+C. It will print 'Another method'  
+D. No Output
+ 
+Ans.B

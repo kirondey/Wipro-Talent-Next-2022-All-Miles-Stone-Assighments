@@ -1,0 +1,425 @@
+ Q1.public class Test {
+	public static void main(String[] args) {
+		int no = 10;
+		if(no % 2)	/* Line 1 */
+		    System.out.println("Even");
+		else
+		    System.out.println("Odd");
+	}
+}
+
+
+A. Compile Time Error 
+B. Runtime Error
+C. It will print 'Even'
+D. It will print 'Odd'                
+
+Ans. A
+
+
+
+	  
+
+Q2.public class Test {
+	public static void main(String[] args) {
+	  while(1)  /* Line 1 */
+	    System.out.println("Inside While");
+	}
+}
+
+
+
+A. Compile Time Error 
+B. Runtime Error
+C. It will print 'Inside While'	
+
+Ans.A
+
+
+
+
+
+Q3.public class Test {
+	public static void main(String[] args) {
+		int a = 1;
+		switch(a) {
+			case 1:
+				System.out.println("A");
+			case 2:
+				System.out.println("B");
+			default:
+				System.out.println("C");
+		}
+	}
+}
+
+
+A. Compile Time Error 
+B. It will print 'A'
+C. It will print 'ABC' 
+D. It will print 'AB'	
+
+Ans.C
+
+Q4.
+public class Test {
+	public static void main(String[] args) {
+		int a = 1;
+		switch (a) {
+			default:
+				System.out.println("C");
+			case 1:
+				System.out.println("A");
+			case 2:
+				System.out.println("B");
+		}
+	}
+}
+
+A. Compile Time Error 
+B. It will print 'A'
+C. It will print 'AB' 
+D. It will print 'ABC'	
+
+Ans.C
+
+Q5.
+public class Test {
+	public static void main(String[] args) {
+		int a = 1;
+		switch (a) {
+			case 1,2:  /* Line 1 */
+				System.out.println("A");
+			case 3:
+				System.out.println("B");
+			default:
+				System.out.println("C");
+		}
+	}
+}
+
+A. Compile Time Error  
+B. It will print 'A'
+C. It will print 'ABC' 
+D. It will print 'AB'
+
+Ans.A
+
+Q6.
+
+public class Test {
+	public static void main(String[] args) {
+		float a = 1;
+		switch(a) {
+			case 1:
+				System.out.println("A");
+			case 3:
+				System.out.println("B");
+			default:
+				System.out.println("C");
+		}
+	}
+}
+
+A. Compile Time Error 
+B. It will print 'A'
+C. It will print 'AB' 
+D. It will print 'ABC'
+
+Ans.A
+
+Q7.
+public class Test {
+	public static void main(String[] args) {
+		int i = 1;
+		do while (i > 1)
+		  System.out.println("Hai");
+		while (i < 1);
+	}
+}
+
+A. Compile Time Error  
+B. No output  
+C. It will print 'Hai' 
+D. Run Time Error
+
+Ans.B
+
+Q7.
+public class Test {
+	public static void main(String[] args) {
+		for (int i = 1; i <= 5; i++)
+			i++;
+		System.out.println(i);
+	}
+}
+
+A. Compile Time Error 
+B. It will print 'A'
+C. It will print 'AB' 
+D. It will print 'ABC'
+
+Ans.A.
+Q8.
+
+public class Test {
+	public static void main(String[] args) {
+		System.out.print(10 + 20);
+		System.out.print("10" + 20);
+		System.out.print("10" + 20 + 30);
+	}
+}
+
+A. Compile Time Error  
+B. 301020102030
+C. 30 30 60
+D. 30 10 20 10 30
+
+Ans.B
+
+Q9.
+public class Test {
+	public static void main(String[] args) {
+		switch (1) {
+			case 1:
+			  System.out.print("A");
+			case 2:
+			  for (int i = 1; i <= 10; i++)
+				break;
+			case 3:
+			  System.out.print("B");
+		}
+	}
+}
+
+A. Compile Time Error 
+B. It will print 'AB' 
+C. It will print 'A' 
+D. It will print 'B'
+
+Ans.B
+
+Q10.
+public class Test {
+	public static void main(String[] args) {
+		int n = 1;
+		do {
+			n--;
+		} while (n > 2);
+		System.out.println(n);
+	}
+}
+
+A. -1  
+B. 0 
+C. 1
+D. 2
+
+Ans.B
+
+Q11.
+public class Test {
+	public static void main(String[] args) {
+		for (int i = 1; i <= 3; i++) {
+				switch (i) {
+					case 1:
+					  System.out.print("A");
+					case 2:
+					  System.out.print("B");
+					case 3:
+					  System.out.print("C");
+			}
+		}
+	}
+}
+
+A. ABCBCC 
+B. ABC
+C. Compile Time Error
+D. ABCBBC
+
+Ans.A
+
+Q12.
+public class Test {
+	 public static void main(String[] args) {
+		 int a = 10;
+		 String s = null;
+		 s=(a > 20) ? "small" : (a < 10) ? "big" : "tiny";
+		 System.out.println(s);
+	 }
+}
+
+A. Compile Time Error
+B. tiny 
+C. small
+D. big
+
+s=((a > 20) ? "small" : ((a < 10) ? "big" : "tiny"));
+   -------    ------    -----------------------------
+   exp1       exp2               exp3
+
+
+((a < 10) ? "big" : "tiny"));
+ --------   ----     -----
+  exp31     exp32    exp33
+
+
+?: -> 2 times
+Associativity : right to left
+In the absence of brackets how the expression will be bracektized 
+that is decided by associativity.
+
+((10/2)*4) =20
+L->R
+
+Ans.B
+
+
+
+Q13.
+
+public class Test {
+	public static void main(String[] args) {
+		int x = 100;
+		double y = 100.1;
+		boolean b = (x = y); /* Line 1 */
+		System.out.println(b);
+	}
+}
+
+A. Compile Time Error 
+B. true
+C. false
+D. null
+
+Ans.A
+
+Q14.
+public class Test {
+	static boolean b;
+	public static void main(String[] args) {
+		short hand = 42;
+		if (hand < 50 & !b)  /* Line 1 */
+			hand++;
+		if (hand > 50);  /* Line 2 */
+		else if (hand > 40) {
+			hand += 7;
+			hand++;
+		} else
+			--hand;
+		System.out.println(hand);
+	}
+}
+
+A. 41
+B. 51 
+C. 50
+D. 42
+
+Ans.B
+
+Q15.
+public class Test {
+	public static void main(String[] args) {
+		boolean bool = true;
+		if (bool = false) /* Line 1 */
+		{
+			System.out.println("A");
+		} else if (bool) /* Line 2 */
+		{
+			System.out.println("B");
+		} else if (!bool) /* Line 3 */
+		{
+			System.out.println("C");
+		} else {
+			System.out.println("D");
+		}
+	}
+}
+
+A. A 
+B. B
+C. C 
+D. D 
+
+Ans.C
+
+
+Q16.
+public class Test {
+	 public static void main(String[] args) {
+		  int Output = 10;
+		  boolean b1 = false;
+		  if ((b1 == true) && ((Output += 10) == 20)) {
+				System.out.println("We are equal " + Output);
+		  } else {
+				System.out.println("Not equal! " + Output);
+		  }
+	 }
+}
+
+A. Compile Time Error  
+B. Compilation and output of "We are equal 10"
+C. Compilation and output of "Not equal! 20"
+D. Compilation and output of "Not equal! 10"
+
+
+Q17.
+
+public class Test {
+	public static void main(String[] args) {
+		int x = 0;
+		int y = 0;
+		for (int z = 0; z < 5; z++) {  z=0,1,2,3,4 -> 5
+		  if ((++x > 2) && (++y > 2))  x=6  y=3
+                {
+				x++;
+			}
+		}
+		System.out.println(x + " " + y);
+	}
+}
+
+A. 5 2 
+B. 5 3
+C. 6 3 
+D. 6 4
+
+Ans.C
+
+Q18.
+
+public class Test {
+	public static void main(String[] args) {
+		boolean b = true;
+		if (b) {
+			System.out.println("Inside If");
+			break;
+		}
+		System.out.println("End");
+	}
+}
+
+A. Compile Time Error  
+B. It will print 'Inside If'
+C. It will print 'Inside If' and 'End'
+D. It will print 'End'
+
+Q19.
+
+public class Test {
+	public static void main(String[] args) {
+		int a = 1;
+		int b = a++ + ++a + a;        U Got:1 + 3 + 3  a:3
+		System.out.println(a+" "+b);
+	}
+}
+
+
+A. 4 7 
+B. 3 6
+C. 3 7 
+D. 6 4 
+
+Ans.C

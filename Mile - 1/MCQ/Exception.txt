@@ -1,0 +1,177 @@
+Exception
+=========
+Q1.
+public class Test{
+    public static void main(String[] args) {
+    	try 
+    	{ 
+    	    int x = 0; 
+    	    int y = 5 / x; 
+    	} 
+    	catch (Exception e) 
+    	{
+    	    System.out.println("Exception"); 
+    	} 
+    	catch (ArithmeticException ae) 
+    	{
+			System.out.println(" Arithmetic Exception"); 
+    	} 
+    	System.out.println("finished");
+ }
+}
+
+
+A.finished	
+B.Exception
+C.Compilation fails.
+D.Arithmetic Exception
+               
+Ans.C
+
+Q2.
+public class Test{
+    public static void main(String[] args) {
+    	try 
+    	{ 
+    	  int y = 5 / 0; 
+    	  System.out.print("Try"); 
+    	} 
+    	catch (ArithmeticException ae) 
+    	{
+    	System.out.print("Arithmetic Exception"); 
+    	}
+    	catch (Exception e) 
+    	{
+    	System.out.print(" Exception"); 
+    	} 
+    	System.out.print(" finished");
+ }
+}
+
+
+A.Try Arithmetic Exception finished	
+B.Exception finished
+C.Arithmetic Exception finished
+D.Try Exception finished
+   
+Ans.C
+
+Q3.
+public class Test {  
+    public static void main(String [] args) {
+        try {
+            badMethod();  
+            System.out.print("A"); 
+        }  
+        catch (Exception ex) {
+            System.out.print("B");  
+        } 
+        finally {
+            System.out.print("C"); 
+        } 
+        System.out.print("D"); 
+    }  
+    public static void badMethod() {
+        throw new Error(); 
+    } 
+}
+
+
+A.ABCD
+B.Compilation fails.
+C.'C' is printed before exiting with an error message.
+D.'BC' is printed before exiting with an error message.
+
+Ans.C
+
+
+Q4
+public class Test {  
+    public static void main(String [] args) {
+        try {
+            badMethod();  
+            System.out.print("A"); 
+        }  
+        catch (Exception ex) {
+            System.out.print("B");  
+        } 
+        catch (Error ex) {
+            System.out.print("E");  
+        }
+        finally {
+            System.out.print("C"); 
+        } 
+        System.out.print("D"); 
+    }  
+    public static void badMethod() {
+        throw new Error(); 
+    } 
+}
+
+
+A.AECD
+B.Compilation fails.
+C.ECD 
+D.ABCD
+   
+public class Test {  
+    public static void main(String [] args) {
+        try {
+            badMethod();  
+            System.out.print("A"); 
+        }  
+        catch (Throwable ex) {
+            System.out.print("B");  
+        } 
+        catch (Error ex) {
+            System.out.print("E");  
+        }
+        finally {
+            System.out.print("C"); 
+        } 
+        System.out.print("D"); 
+    }  
+    public static void badMethod() {
+        throw new Error(); 
+    } 
+}
+
+
+A.AECD
+B.Compilation fails. 
+C.ECD 
+D.ABCD
+
+Ans.B
+      
+
+
+
+public class Test {  
+    public static void main(String [] args) {
+        try {
+            badMethod();  
+            System.out.print("A"); 
+        }  
+        catch (Error ex) {
+            System.out.print("E");  
+        }
+        catch (Throwable ex) {
+            System.out.print("B");  
+        } 
+        finally {
+            System.out.print("C"); 
+        } 
+        System.out.print("D"); 
+    }  
+    public static void badMethod() {
+        throw new Error(); 
+    } 
+}
+
+A.AECD 
+B.Compilation fails. 
+C.ECD 
+D.ABCD
+
+Ans.B

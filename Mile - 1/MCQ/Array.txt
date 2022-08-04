@@ -1,0 +1,138 @@
+Arrays
+======
+Which are valid array declaration?
+
+int a[]={1,2,3}; /* Line 1 */
+int a[3]={1,2,3}; /* Line 2 */
+int a[]=new int[3]; /* Line 3 */
+int a[3]=new int[3]; /* Line 4 */
+
+
+A. Line 1 and 3 
+B. Line 2 and 4
+C. Line 1,2 and 3
+D. All the above
+                
+Ans. A
+	  
+Q2.
+public class Test {
+  public static void main(String argv[]) {
+  int anar[] = new int[] { 1, 2, 3 }; /* Line 1 */ 
+  System.out.println(anar[1]);
+  }
+}
+
+
+A. It will print '2' 
+B. It will print '1'
+C. Compile Time Error
+D. Runtime Error
+
+Ans. A
+
+Q3.
+public class Test {
+	public static void main(String argv[]) {
+		int a[] = { 10, 20, 30 }, b[];
+		b = a; /* Line 1 */ 
+		System.out.println(b[2]);
+	}
+}
+
+
+A. 30 
+B. NaN
+C. An Error at 'b=a'
+D. 0  
+
+Ans. A
+
+Q4.
+public class Test {
+	public static void main(String argv[]) {
+		int anar[] = new int[5];
+		System.out.println(anar[0]);
+	}
+}
+
+
+A. It will print '0' 
+B. It will print '5'
+C. It will print 'null'
+C. Runtime Error
+	
+Ans. A
+
+Q.5
+What will be the output?
+  Just assume that I am going to run like this 
+  'java Test one two'
+
+public class Test {
+	public static void main(String argv[]) {
+		System.out.println(argv[2]);
+	}
+}
+
+
+A. null
+B. No output
+C. Runtime Error (ArrayIndexOutOfBoundsException)  
+D. Compile Time Error		
+
+Ans. A
+
+Q.6
+public class Test {
+	public static void main(String argv[]) {
+	  int arr[] = new int[10];
+	  int i = 5;
+	  arr[i++] = i++ + i++;
+	  System.out.print(arr[5] + ":" + arr[6]);
+	}
+}
+
+
+A. It will print '13 : 0' 
+B. It will print ' 0 : 13'
+C. It will print '13 : 13'
+C. It will print '14 : 14'
+
+Ans. A
+
+Q7.
+public class Test {
+	void myMethod(int arr[]) {
+		arr[0] = 10;	}
+	public static void main(String args[]) {
+	 int[] small = { 1, 2, 3 };
+	 new Test().myMethod(small); /* Line 1 */
+	 System.out.println(small[0]); 	
+   }  
+ }
+
+
+A. 0
+B. 1
+C. 10 
+D. Compile Time Error
+
+
+
+
+Q8.
+public class Test {
+	public static void main(String argv[]) {
+	  int arr[] = new int[10];
+	  int i = 5;
+	  arr[i++] = i++ + i++;
+	  System.out.print(arr[5] + ":" + arr[6]);	
+   }
+}
+
+
+A. It will print '13 : 0' 
+B. It will print ' 0 : 13'
+C. It will print '13 : 13'
+C. It will print '14 : 14'

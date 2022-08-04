@@ -1,0 +1,497 @@
+Inheritance
+------------
+Q1.
+class SuperClass{
+	SuperClass(){
+		System.out.print("A");
+	}
+}
+class SubClass extends SuperClass{
+	SubClass(){
+		System.out.print("B");
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+    SubClass obj=new SubClass();		
+    }
+}
+
+
+A. Compile Time Error 
+B. It will print 'A'
+C. It will print 'AB' 
+D. It will print 'BA'		                
+
+Ans.C
+	  
+Q2.
+
+class SuperClass{
+	SuperClass(){
+		System.out.print("A");
+	}
+	SuperClass(int a){
+		System.out.print("C");
+	}   }
+class SubClass extends SuperClass{
+	SubClass(int a){
+		System.out.print("B");
+	}   }
+public class Test {
+	public static void main(String[] args) {
+    SubClass obj=new SubClass(50);	}
+}
+
+
+A. Compile Time Error 
+B. It will print 'A'
+C. It will print 'AB' 
+D. It will print 'ABC'
+
+Ans.C
+
+
+
+Q3.
+class SuperClass{
+	SuperClass(){
+		System.out.print("A");
+	}
+	SuperClass(int a){
+		System.out.print("C");
+	} 
+}
+class SubClass extends SuperClass{
+	SubClass(int a){
+		super(10);
+		System.out.print("B");
+	} 
+}
+public class Test {
+	public static void main(String[] args) {
+    SubClass obj=new SubClass(50);
+ }
+}
+
+
+A. It will print 'CB'  
+B. It will print 'A'
+C. It will print 'AB' 
+D. It will print 'BA'
+
+Ans.A
+
+Q4.
+
+public class Test {
+	Test(){
+		super();
+		System.out.println("A");
+	}
+	public static void main(String[] args) {
+    Test obj=new Test();	
+    }
+}
+
+
+A. Compile Time Error 
+B. It will print 'A'  
+C. Run Time Error
+D. No Output   
+
+Ans.B
+
+
+Q5.
+class SuperClass{
+	SuperClass(){
+		System.out.print("A");
+	}
+	SuperClass(int a){
+		System.out.print("C");
+	}  
+}
+class SubClass extends SuperClass{
+	SubClass(int a){
+		System.out.print("B");
+		super(10);
+	}  
+}
+public class Test {
+	public static void main(String[] args) {
+    SubClass obj=new SubClass(50);
+ }
+}
+
+A. Compile Time Error  
+B. It will print 'A'
+C. It will print 'AB' 
+D. It will print 'BA'
+
+Ans.A
+
+Q6.
+public class Test {
+	void myMethod(){
+		super();
+		System.out.println("A");
+	}
+	public static void main(String[] args) {
+    Test obj=new Test();	
+    }
+}
+
+
+A. Compile Time Error 
+B. It will print 'A'  
+C. Run Time Error
+D. No Output		
+
+Ans.A
+
+Q7.
+class SuperClass{
+	private SuperClass(){
+		System.out.print("A");
+	}
+	SuperClass(int a){
+		System.out.print("C");
+	} 
+}
+class SubClass extends SuperClass{
+	SubClass(int a){
+		System.out.print("B");
+	} 
+ }
+public class Test {
+	public static void main(String[] args) {
+    SubClass obj=new SubClass(50); 
+ } 
+}
+
+A. Compile Time Error  
+B. It will print 'A'
+C. It will print 'AB' 
+D. It will print 'BA'
+
+Ans.A
+
+Q8.
+
+public class Test {
+	Test(int a){
+		System.out.print("A");
+	}
+	Test(){
+		super();
+		this();
+	}
+	public static void main(String[] args) {
+   	Test obj=new Test(); 
+  }
+ }
+
+
+A. Compile Time Error 
+B. It will print 'A'  
+C. Run Time Error
+D. No Output   
+
+Ans.A
+
+Q9.
+class SuperClass{
+	void myMethod(){
+		System.out.print("A");
+	} 
+}
+class SubClass extends SuperClass{
+	void myMethod(){
+		System.out.print("B");
+	} 
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    obj.myMethod();  
+  } 
+}
+
+
+
+A. Compile Time Error  
+B. It will print 'A'
+C. It will print 'B' 
+D. It will print 'AB'
+
+Ans.C
+
+Q10.
+class SuperClass{
+	int a=10;
+}
+class SubClass extends SuperClass{
+	int a=20;
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    System.out.println(obj.a);
+    }
+}
+
+
+A. Compile Time Error 
+B. It will print '10'  
+C. Run Time Error
+D. It will print '20'
+
+Ans.B
+
+Q11.
+class SuperClass{
+	String s=myMethod();
+	String myMethod(){
+		return "A";
+	}
+ }
+class SubClass extends SuperClass{
+	String myMethod(){
+		return "B";
+	} 
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    System.out.println(obj.s);
+   }
+}
+
+
+A. Compile Time Error  
+B. It will print 'A'
+C. It will print 'B' 
+D. Run Time Error	
+
+Ans.C
+
+Q12.
+class SuperClass{ 	
+}
+class SubClass extends SuperClass{	
+}
+public class Test {
+	public static void main(String[] args) {
+    SubClass obj=new SuperClass();	
+    }
+}
+
+
+A. Compile Time Error  
+B. No Error
+C. Run Time Error
+D. No Output
+
+Ans.A
+
+Q13.
+class SuperClass{
+	String myMethod(){
+		return "B";
+	}
+}
+class SubClass extends SuperClass{
+	void myMethod(){
+	    System.out.println("A");
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    obj.myMethod();   
+ }
+}
+
+
+A. Compile Time Error  
+B. It will print 'A'
+C. It will print 'B' 
+D. Run Time Error
+
+Ans.A
+/*
+Object level type casting
+
+Q14.
+class SuperClass{	
+}
+class SubClass extends SuperClass{	
+}
+public class Test {
+	public static void main(String[] args) {
+    SubClass obj=(SubClass)new SuperClass();	
+    }
+}
+
+
+A. Compile Time Error 
+B. No Error
+C. Run Time Error   
+D. No Output	
+
+
+*/
+
+Q15.
+class SuperClass{
+	protected void myMethod(){
+		System.out.println("A");
+	}
+}
+class SubClass extends SuperClass{
+	void myMethod(){
+	    System.out.println("B");
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    obj.myMethod();  
+ }
+}
+
+
+A. Compile Time Error  
+B. It will print 'A'
+C. It will print 'B' 
+D. Run Time Error
+
+Ans.A
+
+Q16.
+
+class SuperClass{
+	final void myMethod(){
+		System.out.println("A");
+	}
+}
+class SubClass extends SuperClass{
+	void myMethod(){
+	    System.out.println("B");
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    obj.myMethod();  
+ }
+}
+
+
+A. Compile Time Error  
+B. It will print 'B'
+C. Run Time Error  
+D. It will print 'A'
+
+Ans.A
+
+Q17.
+class SuperClass{
+	static void myMethod(){
+		System.out.println("A");
+	}
+}
+class SubClass extends SuperClass{
+	void myMethod(){
+	    System.out.println("B");
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    obj.myMethod(); 
+  }
+}
+
+
+A. Compile Time Error  
+B. It will print 'A'
+C. It will print 'B' 
+D. Run Time Error
+
+Ans.A
+
+Q18.
+final class SuperClass{
+	void myMethod(){
+		System.out.println("A");
+	}
+}
+class SubClass extends SuperClass{
+	void myMethod(){
+	    System.out.println("B");
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    obj.myMethod();
+ }
+}
+
+
+A. Compile Time Error  
+B. It will print 'B'
+C. Run Time Error  
+D. It will print 'A'
+
+Ans.A
+
+Q19.
+class SuperClass{
+	static void myMethod(){
+		System.out.println("A");
+	}
+}
+class SubClass extends SuperClass{
+	static void myMethod(){
+	    System.out.println("B");
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    obj.myMethod();
+ }
+}
+
+
+A. Compile Time Error  
+B. It will print 'A' 
+C. It will print 'B' 
+D. Run Time Error	
+
+Ans.B
+
+Q20.
+class SuperClass{
+	int b=20;
+}
+class SubClass extends SuperClass{
+	int a=10;
+}
+public class Test {
+	public static void main(String[] args) {
+    SuperClass obj=new SubClass();	
+    System.out.println(obj.a);
+ }
+}
+
+
+A. Compile Time Error  
+B. It will print 'B'
+C. Run Time Error  
+D. It will print 'A'
+
+Ans.A
