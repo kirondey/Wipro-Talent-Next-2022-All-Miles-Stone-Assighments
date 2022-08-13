@@ -1,0 +1,87 @@
+public class MySolution {
+    public static int from2Partpassword(int []input1,int input2)
+    {
+        String output="";
+        int farr[]=findFreqency(input1);
+        int part2=findMaxFrequency(input1);
+        for(int i=0;i<input1.length;i++)
+        {
+            if(input1[i]==part2)
+            {
+                input1[i]=0;
+            }
+        }
+        int part1;
+        if(farr[part2]==farr[findMaxFrequency(input1)]){
+            part1=findMaxFrequency(input1);
+            for(int i=0;i<input1.length;i++)
+            {
+                if(input1[i]==part1)
+                {
+                    input1[i]=0;
+                }
+            }
+            part1=findMaxFrequency(input1);
+        }
+        else
+            part1=findMaxFrequency(input1);
+
+        output+=part1;
+        output+=part2;
+
+
+        return Integer.parseInt(output);
+
+    }
+    public static int findMaxFrequency(int []input)
+    {
+        //12 2 36 10 217 36 5 36 15 10
+        int []array=new int[251];
+        for(int i=0;i<input.length;i++)
+        {
+            if(input[i]>0)
+            {
+                array[input[i]]++;
+            }
+        }
+        int maxFreq=0,max=0;
+        for(int i=0;i<array.length;i++)
+        {
+            if(array[i]>0)
+            {
+                if(max<=array[i])
+                {
+                    max=array[i];
+                    maxFreq=i;
+                }
+            }
+        }
+        return maxFreq;
+    }
+
+
+
+    // return frequency array
+    public static int[] findFreqency(int []input){
+        int []array=new int[251];
+        for(int i=0;i<input.length;i++)
+        {
+            if(input[i]>0)
+            {
+                array[input[i]]++;
+            }
+        }
+        return array;
+
+    }
+
+
+    public static void main(String[] args) {
+        //int input1[]={12, 2, 36, 10, 217, 36, 5, 36, 15, 10};
+         int input1[]={12, 2, 36,12, 100, 217, 36, 5, 36, 15,15, 100,100};
+        //int input1[]={5,123,12,45,62,77,89,23,12,14,11,14,12,90,89,12};
+        int input2=input1.length;
+        System.out.println(from2Partpassword(input1,input2));
+    }
+}
+
